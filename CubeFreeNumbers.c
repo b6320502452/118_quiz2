@@ -1,18 +1,14 @@
 #include<stdio.h>
 int ckCube(int n)
 {
-    int ck=0,i=2;
-    for(i;i<n;i++)
-    {
-        if(n==(i*i*i))
-        {
-            ck=1;
-            break;
-        }
-    }
-    if(i==1)
+    if(n==1)
         return 0;
-    return ck;
+    for(int i=2;i<n;i++)
+    {
+        if(n%(i*i*i)==0)
+            return 1;
+    }
+    return 0;
 }
 int main()
 {
@@ -27,9 +23,7 @@ int main()
         for(int i=1;i<=n;i++)
         {
             if(!ckCube(i))
-            {
-                count++;
-            }
+               count++;
         }
         printf("%d",count);
     }
