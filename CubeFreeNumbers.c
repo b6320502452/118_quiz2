@@ -26,20 +26,9 @@ int main()
     {
         for(int i=1;i<=n;i++)
         {
-            if(ckCube(i))
+            if(!ckCube(i))
             {
-                continue;
-            }
-            else
-            {
-                for(int j=1;j<=i;j++)
-                {
-                    if(i%(j*j*j)==0)
-                    {
-                        count++;
-                        break;
-                    }
-                }
+                count++;
             }
         }
         printf("%d",count);
