@@ -4,7 +4,7 @@ int ckCube(int n)
     int ck=0,i=2;
     for(i;i<n;i++)
     {
-        if(i*i*i==n)
+        if(n==(i*i*i))
         {
             ck=1;
             break;
