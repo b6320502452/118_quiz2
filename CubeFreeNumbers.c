@@ -10,18 +10,27 @@ int ckCube(int n)
             break;
         }
     }
+    if(i==1)
+        return 0;
     return ck;
 }
 int main()
 {
-    int n;
+    int n,count=0;
     scanf("%d",&n);
     if(ckCube(n))
     {
-
+        printf("Not Cube Free");
     }
-    for(int i=1;i<n;i++)
+    else
     {
-
+        for(int i=1;i<=n;i++)
+        {
+            if(!ckCube(i))
+            {
+                count++;
+            }
+        }
+        printf("%d",count);
     }
 }
